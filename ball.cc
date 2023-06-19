@@ -29,11 +29,11 @@ int main()
 		{
 			switch(event.type)
 			{
-				case sf::Event::Closed;
+				case sf::Event::Closed:
 				window.close();
 				break;
 
-				default;
+				default:
 				break;
 			}
 		}
@@ -45,7 +45,7 @@ int main()
 	return 0;
 }
 
-Ball::Ball(int rad, int x int y, int r, int g, int b)
+Ball::Ball(int rad, int x, int y, int r, int g, int b)
 {
 	C.setRadius(rad);
 	C.setFillColor(sf::Color(r,g,b));
@@ -54,19 +54,19 @@ Ball::Ball(int rad, int x int y, int r, int g, int b)
 }
 
 void Ball::update(){
-	if(sf::Keyboard::isKeyPresses(sf::Keyboard::Left))
+	if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
 	{
-		C.move(-1,0)
+		C.move(-1,0);
 	}
-	if(sf::Keyboard::isKeyPresses(sf::Keyboard::Right))
+	if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
 	{
-		C.move(-1,0)
+		C.move(1,0);
 	}
-	if(sf::Keyboard::isKeyPresses(sf::Keyboard::Down))
+	if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
 	{
 		C.move(0,1);
 	}
-	if(sf::Keyboard::isKeyPresses(sf:Keyboard::Up))
+	if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
 	{
 		C.move(0,-1);
 	}
